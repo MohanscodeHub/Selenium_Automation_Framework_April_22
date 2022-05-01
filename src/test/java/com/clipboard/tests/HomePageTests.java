@@ -1,6 +1,7 @@
 package com.clipboard.tests;
 
 import com.clipboard.driver.DriverManager;
+import com.clipboard.pages.HomePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
@@ -14,10 +15,10 @@ public final class HomePageTests extends BaseTest{
 
 
     @Test
-    public void test2() {
+    public void hamburgertest() {
 
-        DriverManager.getDriver().findElement(By.name("q")).sendKeys("Why M is best", Keys.ENTER);
-
+      HomePage hm = new HomePage();
+      hm.click_HamburgerMenu();
 
     }
 }
