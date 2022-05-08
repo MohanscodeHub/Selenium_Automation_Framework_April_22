@@ -65,7 +65,8 @@ public final class PageActions {
 
     public static void openlinkinnewwindow(By by) {
         Actions act = new Actions(DriverManager.getDriver());
-        act.moveToElement(DriverManager.getDriver().findElement(by)).contextClick().sendKeys(Keys.DOWN).sendKeys(Keys.DOWN).sendKeys(Keys.ENTER).build().perform();
+        act.keyDown(Keys.SHIFT).click(DriverManager.getDriver().findElement(by)).keyUp(Keys.SHIFT).build().perform();
+
 
     }
 
