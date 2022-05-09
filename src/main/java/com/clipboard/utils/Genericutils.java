@@ -21,9 +21,20 @@ public final class Genericutils {
         List<Integer> priceList = new ArrayList<>();
         for(WebElement el:items){
             Long.parseLong(el.getText());
-            priceList.add((int) Long.parseLong(el.getText()));
+            priceList.add(Integer.parseInt(el.getText()));
         }
         Collections.sort(priceList);
         return priceList.get(index);
     }
+
+    public static void getListOfItems(By by) {
+        List< WebElement> items =DriverManager.getDriver().findElements(by);
+        for(WebElement el:items){
+            String text =el.getText();
+            System.out.println(text);
+        }
+
+        //TODO move this to logger
+    }
+
 }
