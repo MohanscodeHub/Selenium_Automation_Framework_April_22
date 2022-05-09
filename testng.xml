@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Test">
+<suite name="Amazon_Suite">
+    <listeners>
+      <listener class-name="com.clipboard.listeners.TestListener"/>
+    </listeners>
+  <test thread-count="2" name="Test" parallel="methods">
     <classes>
-      <class name="com.clipboard.tests.LoginpageTests"/>
+      <class name="com.clipboard.tests.AddToCartPageTests"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
