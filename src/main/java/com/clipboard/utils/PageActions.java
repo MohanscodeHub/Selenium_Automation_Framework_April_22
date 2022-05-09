@@ -2,15 +2,18 @@ package com.clipboard.utils;
 
 
 import com.clipboard.driver.DriverManager;
+import com.clipboard.reports.ExtentLogger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Set;
+
 
 
 public final class PageActions {
@@ -21,6 +24,7 @@ public final class PageActions {
 
     public static void waitAndClick(By by) {
         waitForElementToBePresent(by).click();
+        ExtentLogger.pass("the elment is clicked successfully");
 
     }
 
@@ -31,8 +35,8 @@ public final class PageActions {
     }
 
     public static WebElement waitForElementToBePresent(By by) {
-        return new WebDriverWait(DriverManager.getDriver(), 10).until(ExpectedConditions.presenceOfElementLocated(by));
-
+        return new WebDriverWait(DriverManager.getDriver(), 50).until(ExpectedConditions.presenceOfElementLocated(by));
+       // TODO - get the wait from framework constants
     }
 
 
@@ -63,12 +67,20 @@ public final class PageActions {
 
     }
 
-    public static void openlinkinnewwindow(By by) {
+    public static void openLinkInNewWindow(By by) {
+        waitForElementToBePresent(by);
         Actions act = new Actions(DriverManager.getDriver());
         act.keyDown(Keys.SHIFT).click(DriverManager.getDriver().findElement(by)).keyUp(Keys.SHIFT).build().perform();
 
 
     }
+
+    public static void selectValueInDropDown(By by,int index) {
+        WebElement element = waitForElementToBePresent(by);
+        Select select = new Select(element);
+        select.selectByIndex(index);
+    }
+
 
 }
 
