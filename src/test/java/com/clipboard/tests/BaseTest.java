@@ -20,6 +20,7 @@ public class BaseTest {
 	protected void setUp(){
 		Driver.initDriver();
 
+
 	}
 
 	@AfterMethod
