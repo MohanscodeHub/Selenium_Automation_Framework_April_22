@@ -1,11 +1,10 @@
 package com.clipboard.pages.pagecomponents;
 
 
-import com.clipboard.pages.BasePage;
 import com.clipboard.utils.PageActions;
 import org.openqa.selenium.By;
 
-public class LeftmenuComponent extends BasePage {
+public class LeftmenuComponent {
 
     private static final By button_ham_menu = By.xpath("//a[@id='nav-hamburger-menu']");
     private static final By itemTv_app_electronics = By.xpath("//div[text()='TV, Appliances, Electronics']");
