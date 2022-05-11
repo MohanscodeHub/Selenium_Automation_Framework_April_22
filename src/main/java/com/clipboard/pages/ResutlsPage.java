@@ -27,9 +27,9 @@ public final class ResutlsPage {
     }
 
 
-    public AddToCartPage switchtoAddToCartPage(){
+    public ProductDetailsPage switchToProductDetailsPage(){
         switchToNewlyOpenedWindow();
-        return new AddToCartPage() ;
+        return new ProductDetailsPage() ;
     }
 
 
