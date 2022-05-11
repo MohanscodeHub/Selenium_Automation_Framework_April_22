@@ -35,8 +35,7 @@ public final class PageActions {
     }
 
     public static WebElement waitForElementToBePresent(By by) {
-        return new WebDriverWait(DriverManager.getDriver(), 50).until(ExpectedConditions.presenceOfElementLocated(by));
-       // TODO - get the wait from framework constants
+        return new WebDriverWait(DriverManager.getDriver(), 50).until(ExpectedConditions.presenceOfElementLocated(by));// TODO - get the wait from framework constants
     }
 
 
@@ -46,7 +45,7 @@ public final class PageActions {
         js.executeScript("window.scrollBy(0,50)", "");
     }
 
-    public static String getText(By by) {
+    public static String getTextByElement(By by) {
         return waitForElementToBePresent(by).getText();
     }
 
