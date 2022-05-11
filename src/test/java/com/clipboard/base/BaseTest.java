@@ -1,4 +1,4 @@
-package com.clipboard.tests;
+package com.clipboard.base;
 
 import com.clipboard.driver.Driver;
 import org.openqa.selenium.WebDriver;
