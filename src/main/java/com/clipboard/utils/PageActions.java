@@ -24,7 +24,7 @@ public final class PageActions {
 
     public static void waitAndClick(By by) {
         waitForElementToBePresent(by).click();
-        ExtentLogger.pass("the elment is clicked successfully");
+        ExtentLogger.pass("the element is clicked successfully");
 
     }
 
