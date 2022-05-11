@@ -1,23 +1,26 @@
 package com.clipboard.pages.pagecomponents;
 
 
+import com.clipboard.utils.DynamicXpathUtils;
 import com.clipboard.utils.PageActions;
 import org.openqa.selenium.By;
 
 public class LeftmenuComponent {
 
-    private static final By button_ham_menu = By.xpath("//a[@id='nav-hamburger-menu']");
-    private static final By itemTv_app_electronics = By.xpath("//div[text()='TV, Appliances, Electronics']");
-    private static final By itemTv_televisions = By.xpath("//a[text()='Televisions']");
+    private static final By buttonHamMenu = By.xpath("//a[@id='nav-hamburger-menu']");
+    String itemTvAppElectronics = "//div[text()='%s']";
+    String itemTelevisions = "//a[text()='%s']";
 
-    private LeftmenuComponent clickHamburgerMenu(){
+    private LeftmenuComponent clickHamburgerMenu() {
 
-        PageActions.waitAndClick(button_ham_menu);
+
+        PageActions.waitAndClick(buttonHamMenu);
         return this;
     }
-    private LeftmenuComponent setLinkMainMenu(){
 
-       PageActions.waitAndClick(itemTv_app_electronics);
+    private LeftmenuComponent setLinkMainMenu() {
+        String xpath = DynamicXpathUtils.getModifiedXpath(itemTvAppElectronics, "TV, Appliances, Electronics");
+        PageActions.waitAndClick(By.xpath(xpath));
         return this;
     }
 
@@ -27,15 +30,13 @@ public class LeftmenuComponent {
     }
 
     private LeftmenuComponent clickLinkMainMenu() {
-        PageActions.waitAndClick(itemTv_televisions);
+        String xpath = DynamicXpathUtils.getModifiedXpath(itemTelevisions, "Televisions");
+        PageActions.waitAndClick(By.xpath(xpath));
         return this;
     }
 
     public LeftmenuComponent navigation() {
-               clickHamburgerMenu()
-               .scrolldownTvAppliancesElectronics()
-                .setLinkMainMenu()
-                .clickLinkMainMenu();
+        clickHamburgerMenu().scrolldownTvAppliancesElectronics().setLinkMainMenu().clickLinkMainMenu();
 
         return this;
     }
