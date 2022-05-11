@@ -6,8 +6,8 @@ import org.openqa.selenium.By;
 
 public final class TelevisonsPage {
 
-    private static LeftmenuComponent leftmenuComponent;
-    private final By checkbox_brands = By.xpath("//span[text()='Samsung']");
+    private final LeftmenuComponent leftmenuComponent;
+    private final By checkboxBrands = By.xpath("//span[text()='Samsung']");
 
 
     public TelevisonsPage() {
@@ -29,9 +29,9 @@ public final class TelevisonsPage {
         return this;
     }
 
-    public ResutlsPage filterbyBrandname() {
+    public ResutlsPage filterByBrandName() {
         scrollintoBrands();
-        PageActions.waitAndClick(checkbox_brands);
+        PageActions.waitAndClick(checkboxBrands);
 
         return new ResutlsPage();
     }
