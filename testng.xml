@@ -6,7 +6,7 @@
     </listeners>
   <test thread-count="2" name="Test" parallel="methods">
     <classes>
-      <class name="com.clipboard.tests.AddToCartPageTests"/>
+      <class name="com.clipboard.tests.ProductDetailsTests"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
