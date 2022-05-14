@@ -14,6 +14,7 @@ public class LeftmenuComponent {
     private LeftmenuComponent clickHamburgerMenu() {
 
 
+        PageActions.moveToElement(buttonHamMenu);
         PageActions.waitAndClick(buttonHamMenu);
         return this;
     }
@@ -25,7 +26,7 @@ public class LeftmenuComponent {
     }
 
     private LeftmenuComponent scrolldownTvAppliancesElectronics() {
-        PageActions.scrollintoView();
+        PageActions.scrollIntoView();
         return this;
     }
 
