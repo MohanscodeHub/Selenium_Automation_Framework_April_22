@@ -12,8 +12,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
 import java.util.Set;
-
 
 
 public final class PageActions {
@@ -34,15 +34,16 @@ public final class PageActions {
 
     }
 
-    public static WebElement waitForElementToBePresent(By by) {
-        return new WebDriverWait(DriverManager.getDriver(), 50).until(ExpectedConditions.presenceOfElementLocated(by));// TODO - get the wait from framework constants
-    }
-
-
-    public static void scrollintoView() {
+    public static void scrollIntoView() {
 
         JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
         js.executeScript("window.scrollBy(0,50)", "");
+    }
+
+    public static void moveToElement(By by) {
+
+        Actions actions = new Actions(DriverManager.getDriver());
+        actions.moveToElement(DriverManager.getDriver().findElement(by));
     }
 
     public static String getTextByElement(By by) {
@@ -74,10 +75,24 @@ public final class PageActions {
 
     }
 
-    public static void selectValueInDropDown(By by,int index) {
+    public static void selectValueInDropDown(By by, int index) {
         WebElement element = waitForElementToBePresent(by);
         Select select = new Select(element);
         select.selectByIndex(index);
+    }
+
+    public static List<WebElement> waitForElementsToBeVisible(By by) {
+        return new WebDriverWait(DriverManager.getDriver(), 30)
+                .until(ExpectedConditions.visibilityOfAllElementsLocatedBy(by));
+    }
+
+
+    public static WebElement waitForElementToBePresent(By by) {
+        return new WebDriverWait(DriverManager.getDriver(), 50).until(ExpectedConditions.presenceOfElementLocated(by));
+    }
+
+    public static WebElement waitForElementToBeClickable(By by) {
+        return new WebDriverWait(DriverManager.getDriver(), 50).until(ExpectedConditions.elementToBeClickable(by));
     }
 
 
