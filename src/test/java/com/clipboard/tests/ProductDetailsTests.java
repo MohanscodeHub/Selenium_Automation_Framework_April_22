@@ -16,7 +16,7 @@ public class ProductDetailsTests extends BaseTest {
                 .navigatetoTelevisionsPage()
                 .filterByBrandName()
                 .sortByPriceHighToLow()
-                .openTheItemByIndex(2)
+                .openTheSecondHighestItem()
                 .switchToProductDetailsPage();
 
 
