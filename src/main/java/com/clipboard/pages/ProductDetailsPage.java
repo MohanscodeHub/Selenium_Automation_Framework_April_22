@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 import java.util.List;
 
-import static com.clipboard.utils.Genericutils.getListOfItems;
+import static com.clipboard.utils.Genericutils.*;
 import static com.clipboard.utils.PageActions.*;
 
 public final class ProductDetailsPage {
@@ -19,7 +19,7 @@ public final class ProductDetailsPage {
 
     public List<String> getProductDetails(){
 
-       return getListOfItems(productFeaturesList);
+       return getListOfItemsAsString(productFeaturesList);
 
     }
 
