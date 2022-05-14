@@ -25,7 +25,7 @@ public final class TelevisonsPage {
 
     private TelevisonsPage scrollintoBrands() {
 
-        PageActions.scrollintoView();
+        PageActions.scrollIntoView();
         return this;
     }
 
