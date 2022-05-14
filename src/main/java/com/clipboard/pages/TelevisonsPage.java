@@ -29,11 +29,11 @@ public final class TelevisonsPage {
         return this;
     }
 
-    public ResutlsPage filterByBrandName() {
+    public ResultsPage filterByBrandName() {
         scrollintoBrands();
         PageActions.waitAndClick(checkboxBrands);
 
-        return new ResutlsPage();
+        return new ResultsPage();
     }
 
 
