@@ -26,3 +26,4 @@ Hi, This framework covers the following Test flow
 2. User can also leverage the thread-count parameter to run the tests in parallel.
 3. User can choose to run via maven commands which is highly recommended.Scroll the left menu and choose TvAppElectronics .
 
+**Use command mvn clean test to run Tests via maven.**
