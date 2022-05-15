@@ -29,7 +29,7 @@ Hi, This framework covers the following Test flow
 Use command **mvn clean test** to run Tests via maven
 
 ## Sample Report :
-![img_7.png](img_7.png)
+![img_7.png](readmeimages/img_7.png)
 
 ## Key Features:
 1. Implemented Page composition for page layers.
