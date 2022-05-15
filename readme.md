@@ -24,8 +24,7 @@ Hi, This framework covers the following Test flow
 
 1. Tests can be run from TestNG.xml.
 2. User can also leverage the thread-count parameter to run the tests in parallel.
-3. User can choose to run via maven commands which is highly recommended.Scroll the left menu and choose TvAppElectronics .
-
+3. User can choose to run via maven commands which is highly recommended.
 Use command **mvn clean test** to run Tests via maven
 
 ## Sample Report :
@@ -36,6 +35,6 @@ Use command **mvn clean test** to run Tests via maven
 2. Utility methods for improving reusability.
 3. Dynamic Xpath for handling locators.
 
-## Gettting in Touch:
+## Getting in Touch:
 
 In case of queries please reach out to krishnanmohan49@yahoo.com
