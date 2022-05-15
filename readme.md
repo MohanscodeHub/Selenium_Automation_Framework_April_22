@@ -1,4 +1,5 @@
 # Amazon Assignment
+Hi, This framework covers the following Test flow
 
 
 ## Libraries Used :
