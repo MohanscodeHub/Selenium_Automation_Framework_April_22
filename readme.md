@@ -8,7 +8,7 @@ Hi, This framework covers the following Test flow
 5. Filter by brand -> Samsung
 6. Sort by Price -> High to Low
 7. Open the second-highest item in new window.
-![img_6.png](img_6.png)
+
 
 ## Libraries Used :
 
