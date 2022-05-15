@@ -27,3 +27,6 @@ Hi, This framework covers the following Test flow
 3. User can choose to run via maven commands which is highly recommended.Scroll the left menu and choose TvAppElectronics .
 
 Use command **mvn clean test** to run Tests via maven
+
+## Sample Report :
+![img_7.png](img_7.png)
