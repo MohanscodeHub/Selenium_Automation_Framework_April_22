@@ -22,6 +22,7 @@ Hi, This framework covers the following Test flow
 ## Running Tests :
 **Prerequisites**: Java 8+ , Maven 3.8.5 Installed and path to be included
 1.Tests can be run from TestNG.xml .
+
 2.User can also leverage the thread-count parameter to run the tests in parallel.
 3.User can choose to run via maven commands which is highly recommended.
 
