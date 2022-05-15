@@ -2,7 +2,7 @@
 Hi, This framework covers the following Test flow
 
 1. Launch Amazon Home.
-2. Click on Hamburgermenu.
+2. Click on Hamburger_Menu.
 3. Scroll the left menu and choose TvAppElectronics .
 4. Scroll and choose Televisions.
 5. Filter by brand -> Samsung
@@ -18,5 +18,5 @@ Hi, This framework covers the following Test flow
 4. **AssertJ** - Fluent Assertion Library in Java
 
 
-**Note : readme.md is still under update.
+
 
