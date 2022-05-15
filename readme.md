@@ -30,3 +30,12 @@ Use command **mvn clean test** to run Tests via maven
 
 ## Sample Report :
 ![img_7.png](img_7.png)
+
+## Key Features:
+1. Implemented Page composition for page layers.
+2. Utility methods for improving reusability.
+3. Dynamic Xpath for handling locators.
+
+## Gettting in Touch:
+
+In case of queries please reach out to krishnanmohan49@yahoo.com
